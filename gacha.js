@@ -92,4 +92,11 @@ function updateGemsDisplay() {
   
 
   }
+
+document.getElementById('clear').addEventListener('click',()=>{
+  const gachaList = document.getElementById('gachaList');
+  const result = document.getElementById('result');
+  gachaList.innerHTML = ""
+  result.innerHTML = ""
+})
   
