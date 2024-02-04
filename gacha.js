@@ -5,9 +5,10 @@ itens =[
   {nome:'Nahida',imagem:"img/nahida.webp"},
   {nome:'Furina',imagem:"img/furina.webp"}
 ]
+localStorage.removeItem('gema');
 
 let ganho = [];
-let gema = localStorage.getItem('gema') || 1000; // Recupera do localStorage ou usa valor padrão
+let gema = parseInt(localStorage.getItem('gema')) || 1000; // Recupera do localStorage ou usa valor padrão
 updateGemsDisplay();
 
 function DisplayResult(result) {
@@ -88,7 +89,15 @@ document.getElementById('gachaButtonx10').addEventListener("click", () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("buy").addEventListener("click", () => {
-    gema += 10;
+    if(gema >=0){
+      gema += 10;
+      localStorage.removeItem('gema');
+    }      
+    else{
+      gema = 10
+      localStorage.removeItem('gema');
+    }
+      
     updateGemsDisplay();
   });
 
