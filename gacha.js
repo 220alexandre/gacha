@@ -89,17 +89,15 @@ document.getElementById('gachaButtonx10').addEventListener("click", () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("buy").addEventListener("click", () => {
-    if(gema >=0){
-      gema += 10;
-      localStorage.removeItem('gema');
-    }      
-    else{
-      gema = 10
-      localStorage.removeItem('gema');
-    }
-      
+         gema += 10;
+  
+    
     updateGemsDisplay();
   });
+  document.getElementById("buy10").addEventListener("click", () => {
+    gema += 100;
+    updateGemsDisplay();
+});
 
 });
 document.getElementById('clear').addEventListener('click',()=>{
