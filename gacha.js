@@ -5,7 +5,7 @@ itens =[
   {nome:'Nahida',imagem:"img/nahida.webp"},
   {nome:'Furina',imagem:"img/furina.webp"}
 ]
-localStorage.removeItem('gema');
+//localStorage.removeItem('gema');
 
 let ganho = [];
 let gema = parseInt(localStorage.getItem('gema')) || 1000; // Recupera do localStorage ou usa valor padrão
